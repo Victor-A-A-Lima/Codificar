@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5183855098302248575}
   - component: {fileID: 3512755236917080126}
   m_Layer: 0
-  m_Name: Capsule 1
+  m_Name: Tiro do player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
