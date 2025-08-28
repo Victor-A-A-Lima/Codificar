@@ -20,7 +20,7 @@ public class InimigoLaser : MonoBehaviour
     {
         if (colisao.gameObject.CompareTag("Player"))
         {
-            colisao.gameObject.GetComponent<VidaDoPlayer>().DanoAoPlayer(DanoparaDar);
+            colisao.gameObject.GetComponent<PlayerLife>().DanoAoPlayer(DanoparaDar);
 
             Destroy(this.gameObject);
         }

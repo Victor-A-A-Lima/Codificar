@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.UI;
 using UnityEngine.UI;
-public class VidaDoPlayer : MonoBehaviour
+public class PlayerLife : MonoBehaviour
 {
     public int VidaMaximadoPlayer;
 
