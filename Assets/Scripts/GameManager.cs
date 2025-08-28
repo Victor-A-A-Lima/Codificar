@@ -18,12 +18,12 @@ public class GameManeger : MonoBehaviour
     void Start()
     {
         SaberAtual = 0;
-        TextodeSaberAtual.text = "Saber: " + SaberAtual;
+        TextodeSaberAtual.text = "Pontuação: " + SaberAtual;
     }
 
     public void AumentarSaber(int SaberParaGanhar)
     {
         SaberAtual += SaberParaGanhar;
-        TextodeSaberAtual.text = "Saber: " + SaberAtual;
+        TextodeSaberAtual.text = "Pontuação: " + SaberAtual;
     }
 }
