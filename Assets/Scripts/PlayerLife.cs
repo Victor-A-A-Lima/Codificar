@@ -4,22 +4,18 @@ using UnityEngine.UI;
 public class PlayerLife : MonoBehaviour
 {
     public int VidaMaximadoPlayer;
-
     public int VidaatualDoPlayer;
 
     public Slider barraDeEscudoDoPlayer;
-
     public Slider BarradeVidaDoplayer;
-
     public GameObject escudoDOJopgador;
 
     public int vidaMaximaDoEscudo;
-
     public int vidaAtualDOescudo;
-
     public bool Temescudo;
-
     public int vidaParaReceber;
+
+    public GameObject telaDerrota;
 
     void Start()
     {
@@ -78,6 +74,9 @@ public class PlayerLife : MonoBehaviour
         if (VidaatualDoPlayer <= 0)
         {
             Debug.Log("game over");
+            if (telaDerrota != null)
+                telaDerrota.SetActive(true);
+            Time.timeScale = 0f;
         }
 
         else

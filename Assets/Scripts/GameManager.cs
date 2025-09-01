@@ -1,29 +1,46 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManeger : MonoBehaviour
 {
     public int SaberAtual;
 
-    //Uma variavel unica
     public static GameManeger instance;
 
-    public Text TextodeSaberAtual;
+    public TMP_Text TextodeSaberAtual;
+
+    public GameObject telaVitoria;
+
     void Awake()
     {
         instance = this;
-        //quando o jogo iniciar a variavel instance ira dar como valor o scrip GameManeger. 
     }
 
     void Start()
     {
         SaberAtual = 0;
-        TextodeSaberAtual.text = "Pontuação: " + SaberAtual;
+        TextodeSaberAtual.text = "PontuaÃ§Ã£o: " + SaberAtual;
+
+        if (telaVitoria != null)
+            telaVitoria.SetActive(false);
     }
 
     public void AumentarSaber(int SaberParaGanhar)
     {
         SaberAtual += SaberParaGanhar;
-        TextodeSaberAtual.text = "Pontuação: " + SaberAtual;
+        TextodeSaberAtual.text = "PontuaÃ§Ã£o: " + SaberAtual;
+
+        TelaDeVitoria();
+    }
+
+    public void TelaDeVitoria()
+    {
+        if (SaberAtual >= 150)
+        {
+            if (telaVitoria != null)
+                telaVitoria.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 }
