@@ -13,4 +13,9 @@ public class ExecutarBotao : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void Sair()
+    {
+        Application.Quit();
+    }
 }

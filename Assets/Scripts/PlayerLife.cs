@@ -73,7 +73,6 @@ public class PlayerLife : MonoBehaviour
 
         if (VidaatualDoPlayer <= 0)
         {
-            Debug.Log("game over");
             if (telaDerrota != null)
                 telaDerrota.SetActive(true);
             Time.timeScale = 0f;

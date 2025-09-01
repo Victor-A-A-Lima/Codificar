@@ -5,11 +5,11 @@ using TMPro;
 public class GameManeger : MonoBehaviour
 {
     public int SaberAtual;
+    public int pontosParaVitoria = 150;
 
     public static GameManeger instance;
 
     public TMP_Text TextodeSaberAtual;
-
     public GameObject telaVitoria;
 
     void Awake()
@@ -36,7 +36,7 @@ public class GameManeger : MonoBehaviour
 
     public void TelaDeVitoria()
     {
-        if (SaberAtual >= 150)
+        if (SaberAtual >= pontosParaVitoria)
         {
             if (telaVitoria != null)
                 telaVitoria.SetActive(true);
