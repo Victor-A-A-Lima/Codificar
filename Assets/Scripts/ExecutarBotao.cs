@@ -6,6 +6,7 @@ public class ExecutarBotao : MonoBehaviour
     public void IrPara(string Title)
     {
         SceneManager.LoadScene(Title);
+        Time.timeScale = 1f;
     }
 
     public void Reiniciar()
