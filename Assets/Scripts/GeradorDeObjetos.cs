@@ -32,7 +32,7 @@ public class GeradorDeObjetos : MonoBehaviour
         int ObjetoAleatorio = Random.Range(0, objetosParaSpawnar.Length);
         int pontoAleatorio = Random.Range(0, pontoDeSpawn.Length);
 
-        Instantiate(objetosParaSpawnar[ObjetoAleatorio], pontoDeSpawn[pontoAleatorio].position, Quaternion.Euler(0f, 0f, -90f));
+        Instantiate(objetosParaSpawnar[ObjetoAleatorio], pontoDeSpawn[pontoAleatorio].position, Quaternion.Euler(0f, 0f, 0f));
 
         TempoAtualDosSpwans = tempoMaximoEntreOsSpwans;
     }

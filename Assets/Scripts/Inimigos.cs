@@ -42,7 +42,7 @@ public class Inimigos : MonoBehaviour
 
     public void MovimentarInimigo()
     {
-        transform.Translate(Vector3.down * velocidadeDoInimigo * Time.deltaTime);
+        transform.Translate(Vector3.left * velocidadeDoInimigo * Time.deltaTime);
     }
 
     private void AtirarLaser()
@@ -72,6 +72,13 @@ public class Inimigos : MonoBehaviour
             }
 
 
+            Destroy(this.gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("parede"))
+        {
             Destroy(this.gameObject);
         }
     }
