@@ -3,8 +3,10 @@ using UnityEngine;
 public class InimigoLaser : MonoBehaviour
 {
     public float velocidadeDolaser;
+    //
 
     public int DanoparaDar;
+    //
 
     void Update()
     {
