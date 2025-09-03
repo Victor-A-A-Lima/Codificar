@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class DestruicomoTempo : MonoBehaviour
 {
-    public float tempodeVida;
+    public float tempoDeVida;
 
     void Start()
     {
-        Destroy(this.gameObject, tempodeVida);
+        Destroy(this.gameObject, tempoDeVida);
     }
 }
